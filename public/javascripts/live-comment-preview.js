@@ -18,11 +18,11 @@ $(function() { // onload
         if ($('#comment-preview').length == 0) {
           comment_form.after('<div id="comment-preview"></div>')
         }
-        $('#comment-preview').text("Failed to submit");
+        $('#comment-preview').text("Не может быть отослано");
       },
       success: function(r) {
         if ($('#comment-preview').length == 0) {
-          comment_form.after('<h2>Your comment will look like this:</h2><div id="comment-preview"></div>')
+          comment_form.after('<h2>Ваш комментарий будет выглядить так:</h2><div id="comment-preview"></div>')
         }
         $('#comment-preview').html(r)
       }

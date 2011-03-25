@@ -78,7 +78,23 @@
     <%= yield %>
   </div>
   <div id="footer">
-      <%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>.  <%= link_to "ATOM", "http://feedvalidator.org/check.cgi?url=#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.
+      <%= enki_config[:title] %> &#169; <%= enki_config[:author, :name] %>.  <%= link_to "ATOM", "#{enki_config[:url]}/posts.atom" %>. Powered by <a href="http://www.enkiblog.com" title="A Ruby on Rails blogging app for the fashionable developer">Enki</a>.
+  <!-- Yandex.Metrika counter -->
+  <div style="display:none;"><script type="text/javascript">
+  (function(w, c) {
+      (w[c] = w[c] || []).push(function() {
+          try {
+              w.yaCounter5317687 = new Ya.Metrika(5317687);
+               yaCounter5317687.clickmap(true);
+               yaCounter5317687.trackLinks(true);
+          
+          } catch(e) { }
+      });
+  })(window, 'yandex_metrika_callbacks');
+  </script></div>
+  <script src="//mc.yandex.ru/metrika/watch.js" type="text/javascript" defer="defer"></script>
+  <noscript><div><img src="//mc.yandex.ru/watch/5317687" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <!-- /Yandex.Metrika counter -->
   </div>
 </div>
 </body>

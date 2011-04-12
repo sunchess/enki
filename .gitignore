@@ -8,3 +8,4 @@ db/schema.rb
 *.log
 *.swp
 config/deploy.rb
+config/initializers/secret_token.rb

@@ -6,6 +6,9 @@
   <title><%= html_title yield(:page_title) %></title>
   <meta name="google-site-verification" content="3cFphtsg3BH-SUvNK5fXbPszlGaVhw0yGkypZ6irWtI" />
   <meta name='yandex-verification' content='7843bf7fd13d3e1a' />
+  <LINK rel="icon" href="/favicon.ico" type="image/x-icon">
+  <LINK rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'default' %>
   <%= javascript_include_tag 'jquery' %>
@@ -59,6 +62,11 @@
       <br/>
       <i>Жизнь. Отдых. Работа!</i>
     </p>
+    <h3>Музыка</h3>
+    <object type="application/x-shockwave-flash" data="/player_mp3.swf" width="170" height="20">
+     <param name="movie" value="player_mp3.swf" />
+     <param name="FlashVars" value="mp3=/music/01_Nemo.mp3" />
+    </object>
         <% unless category_links_for_navigation.empty? -%>
           <h3>категории</h3>
           <ul>

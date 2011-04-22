@@ -417,12 +417,12 @@ table.CodeRay td { padding: 2px 4px; vertical-align: top }
 }
 .CodeRay .line_numbers tt { font-weight: bold }
 .CodeRay .no { padding: 0px 4px }
-.CodeRay .code { width: 430px; overflow:scroll; }
+.CodeRay .code { width: 430px;  }
 
 ol.CodeRay { font-size: 10pt }
 ol.CodeRay li { white-space: pre }
 
-.CodeRay .code pre { overflow: auto }
+.CodeRay .code pre { overflow:scroll; }
 .af { color:#00C }
 .an { color:#007 }
 .av { color:#700 }

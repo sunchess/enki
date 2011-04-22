@@ -399,7 +399,7 @@ pre.ruby .string { color: #b77c0a; }
   font-family: 'Courier New', 'Terminal', monospace;
   color: #100;
   margin-bottom: 1em;
-  width: 450px;
+  width: 490px;
 }
 .CodeRay pre { margin: 0px; font-size: 12px }
 
@@ -417,7 +417,7 @@ table.CodeRay td { padding: 2px 4px; vertical-align: top }
 }
 .CodeRay .line_numbers tt { font-weight: bold }
 .CodeRay .no { padding: 0px 4px }
-.CodeRay .code { width: 430px;  }
+.CodeRay .code { width: 450px;  }
 
 ol.CodeRay { font-size: 10pt }
 ol.CodeRay li { white-space: pre }

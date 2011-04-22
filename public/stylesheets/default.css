@@ -399,6 +399,7 @@ pre.ruby .string { color: #b77c0a; }
   font-family: 'Courier New', 'Terminal', monospace;
   color: #100;
   margin-bottom: 1em;
+  width: 450px;
 }
 .CodeRay pre { margin: 0px; font-size: 12px }
 

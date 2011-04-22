@@ -417,7 +417,7 @@ table.CodeRay td { padding: 2px 4px; vertical-align: top }
 }
 .CodeRay .line_numbers tt { font-weight: bold }
 .CodeRay .no { padding: 0px 4px }
-.CodeRay .code { width: 430px; }
+.CodeRay .code { width: 430px; overflow:scroll; }
 
 ol.CodeRay { font-size: 10pt }
 ol.CodeRay li { white-space: pre }

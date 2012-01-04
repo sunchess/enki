@@ -12,4 +12,16 @@ class ApplicationController < ActionController::Base
     @@enki_config = Enki::Config.default
   end
   helper_method :enki_config
+
+ def ajax_redirect(location)
+    render :update do | page |
+      page << "window.location.replace('#{location}');" 
+    end
+  end
+
+  def ajax_alert(mes)
+    render :update do | page |
+      page << "alert('#{escape_javascript( mes )}');" 
+    end
+  end
 end

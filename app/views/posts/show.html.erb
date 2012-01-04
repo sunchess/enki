@@ -14,7 +14,7 @@
   <% end -%>
 </ol>
 <h2>Комментировать</h2>
-  <% unless @comment.errors.empty? -%>
+<% unless @comment.errors.empty? -%>
   <div class="errors">
     <h3>Комментарий не добавлен!</h3>
     <ul>
@@ -23,11 +23,16 @@
       <% end -%>
     </ul>
   </div>
-  <% end -%>
-<%= form_for([@post, @comment]) do |form| -%>
+<% end -%>
+<div id="errors_comment"></div>
+<%= form_for([@post, @comment], :remote=>true) do |form| -%>
   <div>
     <p><%= form.text_field 'author' %><label for="comment_author"><small>Имя или <a href="http://openidexplained.com/">OpenID</a> </small></label></p>
     <p><%= form.text_area 'body' %><br><small>(<a href="http://lesstile.rubyforge.org">lesstile enabled</a> - вокруг кода ---)</small></p>
     <p><%= submit_tag "Сохранить" %></p>
   </div>
 <% end -%>
+
+<script>
+  //$('#errors_comment').css('border','3px solid red');
+</script>

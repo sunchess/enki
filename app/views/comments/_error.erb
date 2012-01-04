@@ -1,0 +1,7 @@
+
+    <h3>Комментарий не добавлен!</h3>
+    <ul>
+      <% @comment.errors.each do |field, error| -%>
+        <li><%= format_comment_error(error) %></li>
+      <% end -%>
+    </ul>

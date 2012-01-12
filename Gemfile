@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.4'
+gem 'rails', '3.0.10'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -24,7 +24,8 @@ gem 'aaronh-chronic', :require => 'chronic' # Fixes for 1.9.2
 gem 'coderay'
 gem 'lesstile'
 gem 'formtastic'
-gem 'will_paginate', '= 3.0.pre2'
+gem 'will_paginate'
+gem 'rake' , '~> 0.9.2'
 
 # Bundle gems for the local environment. Make sure to
 # put test-only gems in this group so their generators

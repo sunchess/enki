@@ -12,8 +12,13 @@
 
   <%= csrf_meta_tag %>
   <%= stylesheet_link_tag 'default' %>
+  <%= stylesheet_link_tag 'humanmsg' %>
   <%= javascript_include_tag 'jquery' %>
+  <%= javascript_include_tag 'jquery.easing.1.3.js' %>
   <%= javascript_include_tag 'rails' %>
+  <%= javascript_include_tag 'humanmsg' %>
+  <%= javascript_include_tag 'admin/shortcut' %>
+  <%= javascript_include_tag 'admin/common' %>
   <%= open_id_delegation_link_tags(enki_config[:open_id_delegation, :server], enki_config[:open_id_delegation, :delegate]) if enki_config[:open_id_delegation] %>
   <%= yield(:head) %>
 <!--[if gte IE 5]>
@@ -29,6 +34,15 @@
 </style>
 <![endif]-->
 </head>
+
+  <% if flash[:notice] -%>
+    <script>
+    jQuery(document).ready(function() {
+      humanMsg.displayMsg('<%= escape_javascript(flash[:notice]) %>');
+    })
+  </script>
+  <% end -%>
+
 <body>
 <div id="container">
   <div id="banner">
@@ -89,6 +103,7 @@
     </p>
   </div>
   <div id="content">
+
     <%= yield %>
   </div>
   <div id="footer">

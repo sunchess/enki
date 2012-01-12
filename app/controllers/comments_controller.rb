@@ -7,7 +7,6 @@ class CommentsController < ApplicationController
 
   before_filter :find_post, :except => [:new]
 
-  respond_to :js, :only => :create
 
   def index
     if request.post? || using_open_id?
@@ -56,10 +55,9 @@ class CommentsController < ApplicationController
 
     unless response.headers[Rack::OpenID::AUTHENTICATE_HEADER] # OpenID gem already provided a response
       if @comment.save
-        ajax_alert("Комментарий добавлен")
-        return
+        redirect_to post_path(@post), :notice => "Комментарий ушел на суд модератора"
       else
-        render :partial => 'comment_error'
+        render :template => 'posts/show' 
       end
     end
   end
